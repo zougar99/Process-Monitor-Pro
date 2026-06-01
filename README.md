@@ -1,17 +1,53 @@
-# ⚙ Process-Monitor-Pro
+# 📈 Process-Monitor-Pro — A professional Windows process monitoring and system management tool built with Python and CustomTkinter
 
-> A professional Windows process monitoring and system management tool built with Python and CustomTkinter
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/zougar99/Process-Monitor-Pro/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/zougar99/Process-Monitor-Pro?style=social)](https://github.com/zougar99/Process-Monitor-Pro)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-blue)](https://github.com/zougar99/Process-Monitor-Pro)
+
+> A professional Windows process monitoring and system management tool built with Python and CustomTkinter.
+
+---
+
+## 📖 Table of Contents
+- [Features](#-features)
+- [How It Works](#-how-it-works)
+- [Tech Stack](#-tech-stack)
+- [Installation](#-installation)
+- [Configuration](#-configuration)
+- [Usage Guide](#-usage-guide)
+- [Screenshots](#-screenshots)
+- [Roadmap](#-roadmap)
+- [FAQ](#-faq)
+- [Troubleshooting](#-troubleshooting)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ---
 
 ## ✨ Features
+- ✔ **Real-Time Process List** — All running processes with CPU, RAM, disk, network usage
+- ✔ **Suspicious Detection** — Flags unusual processes (unknown publishers, high resource usage)
+- ✔ **Kill/Suspend** — Terminate or suspend processes
+- ✔ **Startup Manager** — View and disable startup programs
+- ✔ **Service Manager** — Start/stop/restart Windows services
+- ✔ **Performance Graphs** — Live CPU/RAM/Disk usage charts
+- ✔ **Export** — Save process snapshot as CSV or HTML
 
-- ✔ **Core performance and stability**
-- ✔ **User-friendly interface**
-- ✔ **Modern technology stack**
-- ✔ Lightweight and optimized
-- ✔ Cross-platform compatibility
-- ✔ Regular updates
+---
+
+## 🔮 How It Works
+
+```
+  Input ──► Processing Pipeline ──► Output
+  ┌────────┐   ┌────────┐   ┌────────┐
+  │ Data   │──►│ Engine │──►│ Result │
+  │ Source │   │ Logic  │   │        │
+  └────────┘   └────────┘   └────────┘
+```
+
+1. **Input** — Load data from file, API, or user input
+2. **Process** — Core engine applies logic/analysis/transformation
+3. **Output** — Results displayed in UI, saved to file, or sent via API
 
 ---
 
@@ -19,9 +55,11 @@
 
 | Component | Technology |
 |-----------|-----------|
-| Language | Python |
-| UI | CustomTkinter / PyQt |
-| Platform | Windows / Linux / macOS |
+| Language | Python 3.10+ |
+| UI | CustomTkinter |
+| System | psutil + wmi + win32api |
+| Charts | Matplotlib |
+| Platform | Windows |
 
 ---
 
@@ -35,26 +73,79 @@ pip install -r requirements.txt
 
 ---
 
-## 🧰 Usage
+## 📄 Configuration
 
-```bash
-python main.py
+Create a `config.yaml` or `.env` file in the project root:
+
+```yaml
+# Application settings
+debug: false
+port: 8080
+theme: dark
+language: en
 ```
+
+---
+
+## 🧰 Usage Guide
+
+1. Run as Admin: `python main.py`
+2. View all processes in real-time
+3. Click a process for details
+4. Right-click to Kill / Suspend / Analyze
+5. Check Startup and Services tabs
+
+---
+
+## 🖼 Screenshots
+
+> *(Screenshots coming soon. PRs welcome!)*
 
 ---
 
 ## 🔄 Roadmap
 
-- [ ] Enhanced features
-- [ ] More languages
-- [ ] Community improvements
-- [ ] Cloud sync
+- 🟢 Web dashboard
+- 🟡 Mobile companion app
+- ⚫ API access
+- ⚫ Plugin system
+- ⚫ Multi-language support
+
+---
+
+## ❓ FAQ
+
+### Does it show network connections per process?
+Yes — including remote IP, port, and protocol.
+
+### Can I save the process list?
+Yes — export as CSV or HTML snapshot.
+
+---
+
+## 🚧 Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| **App won't start** | Check Python version (3.10+); run `pip install -r requirements.txt` |
+| **No output** | Check logs in `logs/` folder; enable debug mode in config |
+| **Performance issues** | Close other applications; reduce batch size in config |
+| **Dependency errors** | Create fresh venv: `python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt` |
 
 ---
 
 ## 🤝 Contributing
 
-Open an issue or submit a PR.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📐 License
+Distributed under the **MIT License**. See [`LICENSE`](https://github.com/zougar99/Process-Monitor-Pro/blob/main/LICENSE) for more information.
 
 ---
 
